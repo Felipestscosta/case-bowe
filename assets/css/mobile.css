@@ -1,0 +1,45 @@
+section.section-download-case a{
+    padding: 20px 40px;
+    width: 100%;
+}
+
+section.section-form .box-form form button{
+    width: 100%;
+}
+
+section.section-perform .box-content{
+    padding: 60px 0;
+}
+
+section.section-perform img{
+    margin-top: 30px;
+}
+
+section.section-case{
+    padding-top: 1000px;
+}
+
+section.section-form .box-form{
+    max-width: 95%;
+}
+
+section.section-form nav.brands ul{
+    justify-content: center;
+}
+
+section.section-download-case img{
+    display: none;
+}
+
+section.section-form{
+    left: 0;
+}
+
+section.section-case .text, section.section-download-case .content{
+    min-width: 100%;
+    padding: 70px 15px;
+}
+
+:before{
+    display: none;
+}

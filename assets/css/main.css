@@ -1,0 +1,312 @@
+@font-face {
+    font-family: Gotham-book;
+    src: url("../fonts/gothambook-webfont.woff");
+}
+
+@font-face {
+    font-family: Gotham-medium;
+    src: url("../fonts/gothammedium-webfont.woff");
+}
+
+@font-face {
+    font-family: Gotham;
+    src: url("../fonts/gothambold-webfont.woff");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Gotham-light;
+    src: url("../fonts/gothamlight-webfont.woff");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Gotham-thin;
+    src: url("../fonts/gotham-thin-webfont.woff");
+    font-weight: bold;
+}
+
+section.section-top {
+    background: #1A1A1A url("../img/bg_building.png") no-repeat fixed;
+    background-size: cover;
+    height: 736px;
+}
+
+section.section-form nav.brands {
+    height: 40px;
+    padding: 50px 0 65px;
+}
+
+section.section-form nav.brands ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 0;
+}
+
+section.section-form nav.brands ul li:first-child {
+    border-right: 1px solid #fff;
+    margin-right: 15px;
+    padding-right: 15px;
+}
+
+section.section-form nav.brands ul li img {
+    height: 30px;
+    padding: 5px 0;
+}
+
+section.section-form .main-title {
+    text-align: center;
+    color: #fff;
+}
+
+section.section-form .main-title h1 {
+    margin-bottom: 60px;
+    font-size: 48px;
+    font-family: Ghotam-medium, sans-serif;
+}
+
+section.section-form .box-form {
+    max-width: 67%;
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+section.section-form .main-title p {
+    color: #fff;
+    font-size: 22px;
+    margin-bottom: 60px;
+    font-family: Gotham-book, sans-serif;
+}
+
+section.section-form .main-title p:after {
+    content: '';
+    height: 2px;
+    width: 87px;
+    background: #3E8DDD;
+    position: absolute;
+    transform: translate(-150px, 45px);
+}
+
+section.section-form {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+section.section-form .box-form .title p:first-child {
+    margin: 0;
+    font-weight: bold;
+    font-family: Ghotam, sans-serif;
+    color: #3E8DDD;
+}
+
+section.section-form .box-form .title {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+section.section-form .box-form .title p {
+    font-family: Gotham-book, sans-serif;
+}
+
+section.section-form .box-form form button {
+    height: 64px;
+    width: 262px;
+    font-size: 20px;
+    font-family: Gotham, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #3F8DDD;
+    color: #fff;
+    border: 0;
+    margin: 40px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.section-form .box-form input {
+    border-bottom: 1px solid #ccc;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    width: 100%;
+    margin-bottom: 20px;
+    height: 30px;
+    padding: 0 0 15px 15px;
+
+}
+
+section.section-form .box-form input:focus {
+    border-bottom: 1px solid #3E8DDD;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    outline: none;
+    transition: all 1s
+}
+
+section.section-form .box-form input:focus::placeholder {
+    color: #D4E1EB;
+}
+
+section.section-form .box-form input::placeholder {
+    color: #5F5F5F;
+}
+
+section.section-form .box-form form button:hover {
+    color: #fff;
+    transition: all 0.7s;
+    background: #2A3C46;
+}
+
+section.section-case {
+    background-color: #1A1A1A;
+    min-height: 580px;
+    padding-top: 300px;
+    padding-bottom: 100px;
+}
+
+section.section-case .text {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto;
+    color: #fff;
+}
+
+section.section-case .text h3 {
+    margin-bottom: 60px;
+    font-family: Gotham-light, sans-serif;
+    font-size: 40px;
+}
+
+section.section-case .text {
+    font-size: 18px;
+    font-family: Gotham-book, sans-serif;
+    width: 100%;
+}
+
+section.section-case .text h3:before {
+    content: '';
+    height: 2px;
+    width: 87px;
+    background: #3E8DDD;
+    position: absolute;
+    transform: translate(240px, 60px);
+}
+
+section.section-perform {
+    background-color: #000000;
+}
+
+section.section-perform .box-content {
+    padding-top: 120px;
+    padding-left: 119px;
+    max-width: 400px;
+    color: #fff
+}
+
+section.section-perform .box-content span {
+    color: #3E8DDD;
+}
+
+section.section-perform .box-content .title h3 {
+    margin-bottom: 40px;
+    font-family: Gotham-light, sans-serif;
+}
+
+section.section-testimonials {
+    background-color: #2A3C46;
+    color: #fff;
+    padding: 120px 0;
+}
+
+section.section-testimonials .box-img {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: 0 auto 50px;
+}
+
+section.section-testimonials .title {
+    margin-bottom: 85px;
+    text-align: center;
+    font-family: Gotham-light, sans-serif;
+    font-size: 40px;
+}
+
+section.section-testimonials .title h3:before {
+    content: '';
+    height: 2px;
+    width: 55px;
+    background: #3E8DDD;
+    position: absolute;
+    transform: translate(110px, 60px);
+}
+
+section.section-testimonials .text {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+section.section-testimonials .author {
+    margin-top: 75px;
+    text-align: center;
+    width: 100%;
+}
+
+section.section-testimonials .author p {
+    font-family: Gotham-book, sans-serif;
+    color: #667372;
+    margin: 0;
+}
+
+section.section-download-case {
+    background: url("../img/bg_modern.png") no-repeat;
+    background-size: cover;
+}
+
+section.section-download-case .content {
+    padding: 127px 0;
+}
+
+section.section-download-case .content .title h3 {
+    font-family: Gotham-thin, sans-serif;
+    font-size: 64px;
+    color: #fff;
+    text-align: center;
+}
+
+section.section-download-case a {
+    width: 432px;
+    height: 64px;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 20px 144px;
+    font-family: Gotham, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 56px auto 0;
+}
+
+section.section-download-case a:hover {
+    background-color: #fff;
+    color: #3E8DDD;
+    transition: all 0.7s;
+    text-decoration: none;
+}
+
+section.section-download-case img {
+    position: absolute;
+    right: 0;
+    transform: translateY(-200px);
+    height: 25%;
+}
