@@ -16,8 +16,7 @@ section.section-perform img{
 }
 
 section.section-case{
-    padding-top: 870px;
-    padding-bottom: 30px;
+    padding-top: 640px;
 }
 
 section.section-form .box-form{
@@ -43,12 +42,4 @@ section.section-case .text, section.section-download-case .content{
 
 section.section-download-case .content .title h3{
     font-size: 60px;
-}
-
-section.section-case .text h3:before{
-    transform: translate(70px, 120px)
-}
-
-section.section-testimonials .title h3:before{
-    transform: translate(120px, 60px)
 }

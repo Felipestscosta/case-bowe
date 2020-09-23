@@ -17,13 +17,11 @@
 @font-face {
     font-family: Gotham-light;
     src: url("../fonts/gothamlight-webfont.woff");
-    font-weight: bold;
 }
 
 @font-face {
     font-family: Gotham-thin;
     src: url("../fonts/gotham-thin-webfont.woff");
-    font-weight: bold;
 }
 
 section.section-top {
