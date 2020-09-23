@@ -36,7 +36,12 @@ section.section-form{
     left: 0;
 }
 
-section.section-case .text, section.section-download-case .content{
+section.section-case .text{
+    min-width: 100%;
+    padding: 120px 15px 0;
+}
+
+section.section-download-case .content{
     min-width: 100%;
     padding: 70px 15px;
 }
