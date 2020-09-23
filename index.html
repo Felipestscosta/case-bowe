@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
           integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/landscape-mobile.css" media="screen and (max-width:640px) and (min-width: 400px)">
+    <link rel="stylesheet" href="assets/css/landscape-mobile.css"
+          media="screen and (max-width:640px) and (min-width: 400px)">
     <link rel="stylesheet" href="assets/css/mobile.css" media="screen and (max-width:400px)">
 
     <title>Case Bowe</title>
@@ -51,21 +52,10 @@
                 <div class="form-group">
                     <div class="row">
                         <div class="col-12 col-md-6">
-                            <input type="text" id="name" placeholder="Nome">
+                            <input type="text" id="name" placeholder="Nome" required>
                         </div>
                         <div class="col-12 col-md-6">
-                            <input type="text" id="last_name" placeholder="Sobrenome">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <div class="row">
-                        <div class="col-12 col-md-6">
-                            <input type="email" id="email" placeholder="E-mail">
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <input type="text" id="phone" placeholder="Telefone">
+                            <input type="text" id="last_name" placeholder="Sobrenome" required>
                         </div>
                     </div>
                 </div>
@@ -73,10 +63,10 @@
                 <div class="form-group">
                     <div class="row">
                         <div class="col-12 col-md-6">
-                            <input type="text" id="business" placeholder="Empresa">
+                            <input type="email" id="email" placeholder="E-mail" required>
                         </div>
                         <div class="col-12 col-md-6">
-                            <input type="text" id="jobs" placeholder="Número de funcionários">
+                            <input type="text" id="phone" placeholder="Telefone" required>
                         </div>
                     </div>
                 </div>
@@ -84,15 +74,27 @@
                 <div class="form-group">
                     <div class="row">
                         <div class="col-12 col-md-6">
-                            <input type="text" id="office" placeholder="Cargo">
+                            <input type="text" id="business" placeholder="Empresa" required>
                         </div>
                         <div class="col-12 col-md-6">
-                            <input type="text" id="sector" placeholder="Setor">
+                            <input type="number" id="jobs" placeholder="Número de funcionários" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <input type="text" id="office" placeholder="Cargo" required>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <input type="text" id="sector" placeholder="Setor" required>
                         </div>
                     </div>
                 </div>
 
                 <button type="submit">Enviar</button>
+                <button type="reset" style="visibility: hidden"></button>
             </form>
         </div>
     </div>
@@ -202,5 +204,64 @@
         <img src="assets/img/vertical_lenovo_logo.png" alt="">
     </div>
 </section>
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+    (function () {
+
+        const formElement = document.querySelector('form');
+        formElement.addEventListener('submit', function (e) {
+            e.preventDefault();
+            sendEmail();
+        })
+
+        function sendEmail(e) {
+            let nameElement = document.querySelector('#name'),
+                lastNameElement = document.querySelector('#last_name'),
+                emailElement = document.querySelector('#email'),
+                phoneElement = document.querySelector('#phone'),
+                businessElement = document.querySelector('#business'),
+                numberJobsElement = document.querySelector('#jobs'),
+                officeElement = document.querySelector('#office'),
+                sectorElement = document.querySelector('#sector');
+
+            //Aguardando Envio
+            let buttonElement = document.querySelector('form button');
+            buttonElement.textContent = 'ENVIANDO...';
+
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "fastdevbr@gmail.com",
+                Password: "6232B7DCA4B18EF2C8724E5D4E15B1E6653D",
+                To: 'seuemail@mail.com', //Coloque seu endereço de email
+                From: "fastdevbr@gmail.com",
+                Subject: "Email - Case Bowe",
+                Body: `
+                    A empresa ${businessElement.value} se interessou pela campanha.<br>
+                    <hr>
+                    <p>Informações da Empresa:</p>
+                    <ul>
+                        <li><b>Responsável pelo contato</b>: ${nameElement.value} ${lastNameElement.value}</li>
+                        <li><b>Email</b>: ${emailElement.value}</li>
+                        <li><b>Telefone</b>: ${phoneElement.value}</li>
+                        <li><b>Empresa</b>: ${businessElement.value}</li>
+                        <li><b>Número de funcionários</b>: ${numberJobsElement.value}</li>
+                        <li><b>Cargo</b>: ${officeElement.value}</li>
+                        <li><b>Setor</b>: ${sectorElement.value}</li>
+                    </ul>
+                `
+            }).then((response) => {
+                buttonElement.textContent = 'ENVIAR';
+                if(response === 'OK'){
+                    alert('Email enviado com sucesso!');
+
+                    let resetButton = document.querySelector('form button[type=reset]');
+                    resetButton.click();
+                }
+            });
+        }
+
+    }())
+</script>
 </body>
 </html>

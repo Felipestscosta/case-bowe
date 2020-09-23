@@ -156,10 +156,11 @@ section.section-form .box-form input::placeholder {
     color: #5F5F5F;
 }
 
-section.section-form .box-form form button:hover {
+section.section-form .box-form form button:hover, section.section-form .box-form form button:active, section.section-form .box-form form button:focus {
     color: #fff;
     transition: all 0.7s;
     background: #2A3C46;
+    outline: none;
 }
 
 section.section-case {
